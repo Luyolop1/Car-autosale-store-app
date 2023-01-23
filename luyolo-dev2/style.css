@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+      font-weight: 100;
+      font-family:  montserati;
+      scroll-behavior: smooth ;
+    }
+
+a{
+    text-decoration: none;
+    
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*header*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header{
+    min-height: 8vh;
+    background-color: rgba(31, 30, 30, 0.24);
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+    
+}
+
+#header .nav-list ul{
+    float: right;
+    margin-left: 100px;
+    list-style: none;
+    position: absolute;
+    background-color: rgba(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+}
+
+#header .nav-list ul.active{
+    left: 0;
+}
+
+#header .nav-bar .brand {
+
+    margin-left: -96px;
+}
+#header .nav-list ul a {
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav-list ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    color: rgba(240, 248, 255, 0.021);
+    font-size: 15rem;
+    letter-spacing: 50px;
+    z-index: -1;
+}
+
+#header .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#header .nav-list ul li:hover a{
+    color: aqua;
+}
+
+#header .nav-list ul li .button {
+    background-color: transparent;
+    border: 1px solid white;
+    
+}
+
+#header .nav-list ul li .button:hover{
+    background-color: white;
+    transition: .5s ease;
+    color: #485563;
+}
+
+#header .hamburger {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#header .hamburger::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_puls 1s ease infinite;
+}
+
+#header .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    position:relative;
+    background-color: white;
+    z-index: -1;
+}
+
+
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after{
+    top: 8px;
+}
+    
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before{
+  bottom: 0;
+}
+    
+#header .hamburger.active .bar::after{
+  top: 0;
+}
+
+/*end header*/
+
+
+/*home*/
+
+#home {
+    background-image: url('/img/Audi-Konzeptcar-revolutionaeres-Design-3-scaled-e1650379952737-980x490.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#home::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(66, 63, 63);
+    opacity: .5;
+    z-index: -1;
+}
+
+#home h1{
+    display: block;
+    width: fit-content;
+    margin-right: 1200px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 4;
+    color:white;
+    position: relative;
+    text-transform: uppercase;
+    justify-content: space-between;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#home h1:nth-child(1){
+    animation-delay:  1s;
+}
+
+#home h1:nth-child(2){
+    animation-delay:  2s;
+}
+
+#home h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay:  3s;
+}
+
+#home h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    animation: text_reaveal_box .5s ease forwards;
+    animation-delay: 1.5s;
+    
+
+}
+#home h1:nth-child(1) span{
+    animation-delay:  .5s;
+}
+
+#home h1:nth-child(2) span{
+    animation-delay:  1.5s;
+}
+
+#home h1:nth-child(3) span{
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay:  3.5s;
+}
+
+#home .button{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease background-color;
+}
+
+#home .button:hover{
+       color: rgb(61, 58, 58);
+       background-color: white;
+}
+/*end -- home*/
+
+
+/*Review*/
+#review-container .review-top .review-title h1 {
+    text-align: center;
+    margin-top: 100px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    font-weight: 100;
+}
+
+#review-container .review-bottom .review-items .image-group{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px ;
+    padding-bottom: 100px;
+
+}
+
+.image-card {
+    width: 100px;
+    height: 200px;
+
+}
+
+.image-card:hover{
+    transform: scalex(1);
+    transition: 1s;
+    left: 0;
+    top: 0;
+}
+/*end Review*/
+
+/*Home page Products*/
+#product .container .product-top .product-title h1{
+    text-align: center;
+    margin-top: -400px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+#product .container .product-top .product-title h1 span {
+    color: aqua;
+}
+
+#product .container .product-bottom .product-items .row .card-group .card {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    width: 18%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 75px;
+    
+}
+#product .container   p{
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight:1px ;
+}
+#product .container .card {
+    background-color:  rgb(230, 230, 240);
+    border: 1px solid #405060;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;   
+    
+}
+
+#product .container  a{
+
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#product .container .product-bottom .product-items .row .card-group .card .card-img-top{
+    width: 250px;
+}
+
+
+#product .container button,
+#repairs-container button {
+    background-color: orange;
+    border: none;
+    border-radius: 0%;
+    margin-left: 80px;
+    width: 100px;
+    height: 30px;
+    font-weight: 100;
+    color: white;
+}
+/*end -- Home page Products*/
+
+
+/*Home Repairs*/
+#repairs-container .repairs-top .repairs-title h1{
+    text-align: center;
+    margin-top: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 1;
+}
+
+#repairs-container .repairs-top .repairs-title h1 span {
+    color: aqua;
+}
+
+#repairs-container .repairs-bottom .product-items .row .card-group .card {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 75px;
+    
+}
+
+#repairs-container .repairs-bottom  p{
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight:1px ;
+}
+/*end repairs*/
+
+
+/*Sign - in form*/
+#sign-in  .container form .sign-in {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color:#405060;
+    padding: 80px 40px;
+    border-radius: 5px;
+}
+
+#sign-in .container .title {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(233, 233, 240);
+  margin-top: 50px;
+}
+
+#sign-in .container .sign-in .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: #7d3ae8;    
+}
+
+form .sign-in .input-boxes{
+    margin-top: 30px;
+    
+}
+
+form .sign-in  .input-boxes{
+    margin-top: 30px;
+}
+
+form .sign-in .input-box{
+    height: 50px;
+    width: 100%;
+}
+form .form-content .title:before{
+    width: 20px;
+}
+
+form .form-content .title a{
+    color: white;
+}
+
+
+
+#sign-in .container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*end -- Sign - in form*/
+
+
+
+
+
+
+/*Cart page*/
+#cartcontainer {
+    margin-top: 150px;
+    margin-left: 75px;
+    flex-basis: (-50% , -50%) ;
+    border-collapse: collapse;
+    width: 90%;
+    table-layout: fixed;
+    
+}
+
+
+#cartcontainer  .cart-title h1{
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+#cartcontainer  .cart-title h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: #dea428;   
+}
+
+#cartcontainer table{
+    align-items: center;
+    justify-content: center;
+    flex-basis: (-50% , -50%);
+}
+
+#cartcontainer table thead td{
+    font-weight: 700;
+}
+
+#cartcontainer table thead td{
+    background: #dea428;
+    color: white;
+    border: none;
+    padding: 6px 0;
+}
+
+#cartcontainer table td{
+    border: 1px solid #b6b6b6;
+    text-align: center;
+}
+
+#cartcontainer table td:nth-child(1) {
+    width: 100px;
+    
+}
+
+#cartcontainer table td:nth-child(2),
+#cartcontainer table td:nth-child(3) {
+    width: 200px;
+}
+
+#cartcontainer table td:nth-child(4),
+#cartcontainer table td:nth-child(5),
+#cartcontainer table td:nth-child(6) {
+    width: 170px;
+}
+
+#cartcontainer table tbody img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+
+
+/*End-- Cart page*/
+
+
+/*Contact*/
+#contact-container{
+    left: 0;
+    top: 0;
+    height: 100vh;
+
+}
+
+#contact-container .contact-header h1{
+    margin-top: 130px;
+    font-size: 3rem;
+    font-weight: 10;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+#contact-container .col-right p{
+    width: 40vw;
+    margin-left:850px;
+    
+    
+}
+
+#contact-container .col-left {
+    margin-left: 200px;
+}
+
+#contact-container .col-right .header {
+    text-transform: none;
+    font-weight: 10;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 1100px;
+    
+}
+/*end contact*/
+
+
+
+/* About*/
+#about .about-container{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+    
+}
+#about .col-right{
+    width: 100%;
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p{
+    margin-bottom: 20px;
+}
+
+
+#about .about .col-left .about-img::after{
+    left: -45px;
+    top:34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid grey;
+}
+
+#about .col-right {
+    width: 100%;
+}
+
+
+#about .col-right h1{
+    text-align: left;
+    
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+    
+}
+/* end -- about*/
+
+/*footer*/
+#footer .container {
+    background-image:url('/img/c02b95adba2daf791fd8257553eca7dd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    position: relative;
+    opacity: .7 ;
+    z-index: 1;
+} 
+
+#footer .container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #554e4e;
+    z-index: -1;
+} 
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+/*end footer*/
+
+/*contact us*/
+#contact-form{
+     position: relative;
+     justify-content: center;
+}
+/*end contact us*/
+
+
+ /* KEY FRAMES*/
+ @keyframes hamburger_puls{
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+ }
+ 
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100%{
+        color: white;
+        font-weight: 500px;
+    }
+}
+/*end key frames*/
+
+
+/* media query for Desktop */
+@media only screen and (min-width: 1200px) {
+ /*header*/
+ #header .hamburger{
+    display: none;
+ }
+ #header .nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+
+#header .nav-list ul li{
+    display: inline-block;
+}
+
+#header .nav-list ul li a{
+    display: inline-block;
+}
+
+
+#header .nav-list ul li a::after{
+    display: none;
+}
+ /* End header*/
+
+ 
+ /*service*/
+ #product .product-bottom .product-items{
+    flex-basis: 22%;
+    margin: 1.5%;
+ }
+ /*end service*/
+}
+/* End media query for Desktop */
+
+/*css swapper*/
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+@media (min-width: 40em) {
+            
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+@media only screen and (min-width: 1200px) {
+    #review-container .img{
+        width: 20px;
+    }
+}
+/*end --css swapper*/

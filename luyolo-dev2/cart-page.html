@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car - Cart page</title>
+  
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <!--header-->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="/index.html"><img src="/img/phi.png" width="60"></a>
+                </div>
+                <div class="nav-list">
+                   <div class="hamburger"><div class="bar"></div></div>
+                   <ul>
+                    <li><a href="index.html" data-after="Home">home</a></li>
+                    <li><a href="product.html" data-after="Product">product</a></li>
+                    <li><a href="about.html" data-after="About">About</a></li>
+                    <li><a href="contact.html" data-after="Contact">Contact</a></li>
+                    <li><a href="sign-in.html" type="button" data-after="sign-in" class="button">Sign-in</a></li>
+                    <li class="cart">
+                      <a href="cart-page.html">cart<span>0</span></a>
+                    </li> 
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--end header-->
+   
+
+  <section id="cartcontainer" class="">
+    <div class="cart-top">
+        <div class="cart-title">
+            <h1>Cart page</h1>
+        </div>
+    </div>
+    <div class="cart-bottom">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Quantity</td>
+                    <td>Prices</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><a href=""><i class="fas fa trash-alt"></i></a></td>
+                    <td><img src=""></td>
+                    <td>
+                        <h5></h5>
+                    </td>
+                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td><h5></h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
+
+  <section id="cart-bottom" class="container">
+    <div class="row">
+        <div class="total col-lg-6 col-md-6 col-12 mb-4">
+            <div>
+                <h5></h5>
+                <input type="total">
+            </div>
+        </div>
+    </div>
+  </section>
+<!--Scripts-->
+<script src="app2.js"></script>
+<script src="app3.js"></script>
+<!--end scripts-->
+</body>
+</html>
