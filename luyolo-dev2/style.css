@@ -23,7 +23,9 @@ a{
     justify-content: center;
 }
 
-
+body{
+    background: #323c44;
+}
 
 /*header*/
 #header{
@@ -327,20 +329,55 @@ a{
     font-weight: 200;
 }
 
-#product .container .product-top .product-title h1 span {
+#product .container  h1 span {
     color: aqua;
 }
 
-#product .container .product-bottom .product-items .row .card-group .card {
-    display: inline-block;
+
+
+.card{
+    overflow: hidden;
+    background: #ffffff;
+    color: rgb(54, 45, 34);
+    text-align: center;
+    width: 240px;
+    height: 340px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width: 18%;
-    height: 100%;
-    margin-top: 50px;
-    margin-left: 75px;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 2rem;
     
 }
+
+.card:hover img{
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.card button:link, .card button:visited{
+    color: #ececec;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2101e2;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.card button{
+     border-radius: 2rem ;
+}
+
+.card button:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
 #product .container   p{
     margin-top: 30px;
     text-align: center;
@@ -348,36 +385,17 @@ a{
     font-size: 17px;
     font-weight:1px ;
 }
-#product .container .card {
-    background-color:  rgb(230, 230, 240);
-    border: 1px solid #405060;
-    border-radius: 10%;
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px;   
-    
-}
-
-#product .container  a{
-
-    margin-top: 10px;
-    margin-left: 100px;
-}
-
-#product .container .product-bottom .product-items .row .card-group .card .card-img-top{
-    width: 250px;
-}
 
 
 #product .container button,
 #repairs-container button {
     background-color: orange;
     border: none;
-    border-radius: 0%;
-    margin-left: 80px;
-    width: 100px;
-    height: 30px;
-    font-weight: 100;
+    border-radius: 1rem;
+    width: 130px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 100px;
     color: white;
 }
 /*end -- Home page Products*/
