@@ -26,6 +26,48 @@ const products = [
         price: 3000000,
         inCart: 0
     },
+    {
+        name: "Mc laren",
+        tag:  "Mc laren",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: "lamborghini suv",
+        tag:  "lambhorghini suv",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: " Rolls royce boat tail",
+        tag:  "Rolls royce boat tail",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: "Porsche 911",
+        tag:  "Porsche s911",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: "Porsche 911",
+        tag:  "Porsche 911",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: "Royce royce boat tail",
+        tag:  "Rolls royce boat tail",
+        price: 3000000,
+        inCart: 0
+    },
+    {
+        name: "Porsche 911",
+        tag:  "Porsche s911",
+        price: 3000000,
+        inCart: 0
+    },
 ]
 
 for (let i=0; i <carts.length; i++) {

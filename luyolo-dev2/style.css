@@ -320,7 +320,7 @@ body{
 /*end Review*/
 
 /*Home page Products*/
-#product .container .product-top .product-title h1{
+ h1{
     text-align: center;
     margin-top: -400px;
     text-decoration: none;
@@ -328,21 +328,35 @@ body{
     font-size: 3rem;
     font-weight: 200;
 }
-
-#product .container  h1 span {
+ h1 span {
     color: aqua;
+    font-weight: 100;
+}
+ 
+h4{
+    margin-top: 50px;
+    font-weight: 100;
 }
 
+p{
+    font-weight: 500;
+    margin-top: 10px;
+}
+.product-group  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
 
-
-.card{
+.product{
     overflow: hidden;
     background: #ffffff;
     color: rgb(54, 45, 34);
     text-align: center;
     width: 240px;
     height: 340px;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,12 +366,12 @@ body{
     
 }
 
-.card:hover img{
+.product:hover img{
   scale: 1.1;
   transition: 0.5s;
 }
 
-.card button:link, .card button:visited{
+.product button:link, .card button:visited{
     color: #ececec;
     display: inline-block;
     text-decoration: none;
@@ -368,26 +382,17 @@ body{
     transition: all 0.2s;
 }
 
-.card button{
+.product button{
      border-radius: 2rem ;
 }
 
-.card button:hover{
+.product button:hover{
     transform: scale(1.1);
     transition: .2s;
 }
 
 
-#product .container   p{
-    margin-top: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight:1px ;
-}
-
-
-#product .container button,
+#products button,
 #repairs-container button {
     background-color: orange;
     border: none;
@@ -398,13 +403,19 @@ body{
     font-weight: 100px;
     color: white;
 }
+
+
 /*end -- Home page Products*/
+
+
+
+
 
 
 /*Home Repairs*/
 #repairs-container .repairs-top .repairs-title h1{
     text-align: center;
-    margin-top: 100px;
+    margin-top: -100px;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 3rem;
@@ -434,6 +445,21 @@ body{
     font-weight:1px ;
 }
 /*end repairs*/
+
+/*PRODUCT PAGRE*/
+#products .title h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.all-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* PRODUCT Page end */
 
 
 /*Sign - in form*/
@@ -619,60 +645,75 @@ form .form-content .title a{
 
 
 /* About*/
-#about .about-container{
+#about .about {
     flex-direction: column-reverse;
     text-align: center;
-    max-width: 1200px;
+    max-width: 1200pc;
     margin: 0 auto;
     padding: 100px 20px;
-
 }
-#about .col-left{
+
+#about .col-left {
     width: 250px;
     height: 360px;
-    
-}
-#about .col-right{
-    width: 100%;
+
 }
 
-#about .col-right h2{
-    font-size: 1.8rem;
+#about .col-right h1 {
+    font-size: 5rem;
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 10px;
+    margin-left: 750px;
+}
+
+#about .col-right h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+    margin-left: 750px;
+}
+
+#about .col-right a{
+    margin-left: 750px;
+    height: 10px;
+    width: 20px;
+    border: 2px solid white;
+    color: white;
+
+}
+
+#about .col-right a:hover{
+   background-color: white;
+   color: black;
+   transition: .5s;
+    
 }
 
 #about .col-right p{
     margin-bottom: 20px;
+    margin-left: 750px;
 }
 
+#about .col-left .about-img{
+    height: 550px;
+    width: 600px;
+    position: relative;
+    border: 10px solid white;
+}
 
-#about .about .col-left .about-img::after{
-    left: -45px;
-    top:34px;
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 50px;
     height: 98%;
     width: 98%;
-    border: 10px solid grey;
+    border: 7px solid crimsom;
+    z-index: -1;
 }
 
-#about .col-right {
-    width: 100%;
-}
-
-
-#about .col-right h1{
-    text-align: left;
-    
-}
-
-#about .col-right h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-    
-}
 /* end -- about*/
 
 /*footer*/
@@ -704,6 +745,8 @@ form .form-content .title a{
     padding-bottom: 10px;
 }
 /*end footer*/
+
+
 
 /*contact us*/
 #contact-form{
